@@ -1,2 +1,8 @@
-# SemanticSearchEngine
-Semantic search over Simple English Wikipedia using sentence embeddings, ANN retrieval, and a FastAPI backend — with quantitative retrieval evaluation (Recall@k, MRR).
+# Semantic Search Engine (Simple English Wikipedia)
+
+## Overview
+## Architecture
+## Setup & Usage
+## Evaluation (Recall@k, MRR)
+## Tech Stack
+## Results
