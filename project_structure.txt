@@ -1,0 +1,18 @@
+semantic-search-engine/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
+├── docker/
+│   └── Dockerfile
+├── src/
+│   ├── ingestion/         # download + chunk wikipedia dump
+│   ├── embeddings/        # embedding generation script
+│   ├── indexing/          # Chroma index build
+│   ├── api/               # FastAPI app
+│   └── evaluation/        # Recall@k, MRR scripts
+├── data/                  # gitignored — raw/processed data
+├── eval/
+│   └── queries.json       # your hand-labeled query set
+├── notebooks/             # exploratory work
+└── tests/
