@@ -1,0 +1,20 @@
+services:
+  semantic-search-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the locally-built data (chunks/embeddings/chroma_db) read-only
+      # into the container. Build this on your host first with:
+      #   python src/ingestion/load_and_chunk.py
+      #   python src/embeddings/generate_embeddings.py
+      #   python src/indexing/build_index.py
+      - ./data:/app/data:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s

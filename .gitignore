@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data (large, regenerable via src/ingestion + src/embeddings + src/indexing scripts)
+data/
+
+# Eval outputs (regenerable via src/evaluation/run_eval.py)
+eval/results.json
+eval/results.md
