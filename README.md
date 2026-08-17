@@ -134,7 +134,6 @@ python src/evaluation/run_eval.py --k-values 1 3 5 10
 - [x] Data ingestion & chunking pipeline
 - [x] HNSW-indexed vector retrieval
 - [x] FastAPI serving layer with caching
-- [ ] Hand-labeled evaluation set + Recall@k / MRR results
 - [ ] Cloud deployment
 
 ## License
